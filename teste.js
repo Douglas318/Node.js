@@ -6,7 +6,8 @@ const app = express();
 app.use(express.json());
 
 app.post("/contas-a-receber", [
-    body("descricao").stringify(),
+    //Verificar funções corretamente.
+    body("descricao").includes(),
     body("valor").isNumeric(),
     body("datadecompetencia").isDate(),
     body("datadecaixa").isDate(),
@@ -29,6 +30,6 @@ app.get("/contas-a-receber/relatorios", (req, res) => {
     });
 })
 
-app.listen(8083, () => {
+app.listen(8084, () => {
     console.log("Servidor rodando!")
 })
