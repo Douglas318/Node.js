@@ -7,11 +7,11 @@ app.use(express.json());
 
 app.post("/contas-a-receber", [
     //Verificar funções corretamente.
-    body("descricao").includes(),
-    body("valor").isNumeric(),
-    body("datadecompetencia").isDate(),
-    body("datadecaixa").isDate(),
-    body("contato").isNumeric(),
+    body("descricao"),
+    body("valor"),
+    body("datadecompetencia"),
+    body("datadecaixa"),
+    body("contato"),
 ], (req, res) => {
     
     const errors = validationResult(req);
