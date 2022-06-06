@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 
 app.post("/contas-a-receber", [
-    //Verificar funções corretamente.
+    //Verificar funções.
     body("descricao"),
     body("valor"),
     body("datadecompetencia"),
