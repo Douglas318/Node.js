@@ -39,10 +39,18 @@ app.post("/contas-a-receber", (req, res) => {
 });
 
 app.get("/contas-a-receber/relatorios", (req, res) => {
-    fs.readFileSync('teste.json', (err, arquivo) => {
-        return res.status(200).json({message: "Erro."})
+    //testando essa parte
+    fs.readFile('teste.json', (err, arquivo) => {
+        
+        if(err) {
+            return res.status(400).json({message:"Erro"})
+        };
+
+        return res.status(200).json(arquivo);
+        
+        
     });
-})
+});
 
 app.listen(8083, () => {
     console.log("Servidor rodando!")
