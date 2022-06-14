@@ -28,8 +28,8 @@ app.post("/contas-a-receber", (req, res) => {
         const response = {
             descricao: req.body.descricao,
             valor: req.body.valor,
-            datadecompetencia: req.body.datadecompetencia,
-            datadecaixa: req.body.datadecaixa,
+            datadecompetencia: req.body.data_de_competencia,
+            datadecaixa: req.body.data_de_caixa,
             contato: req.body.contato
         };
 
