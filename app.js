@@ -53,6 +53,6 @@ app.get("/contas-a-receber/relatorios", (req, res) => {
 });
 
 app.listen(8083, () => {
-    console.log("Servidor rodando na porta 8083 => http://localhost:8083/contas-a-receber/relatorios")
+    console.log("Servidor rodando http://localhost:8083")
 })
 
