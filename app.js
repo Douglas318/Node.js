@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 
 app.post("/contas-a-receber", (req, res) => {
-    
+  
     if(!req.body.descricao) {
         return res.status(400).json({message: "A descrição da conta não foi informada, verifique" })
     } 
@@ -20,7 +20,7 @@ app.post("/contas-a-receber", (req, res) => {
     }    
     if(!req.body.contato) {
         return res.status(400).json({message: "O contato da conta não foi informada, verifique"})
-    } 
+} 
 
     const response = {
     descricao: req.body.descricao,
@@ -43,9 +43,10 @@ app.get("/contas-a-receber/relatorios", (req, res) => {
         let jeison = JSON.parse(arquivo)
         return res.status(200).json(jeison)
     })
+
 });
 
 app.listen(8083, () => {
-    console.log("Servidor rodando!")
+    console.log("Servidor rodando http://localhost:8083")
 })
 
