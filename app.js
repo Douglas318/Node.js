@@ -43,7 +43,7 @@ try {
 app.get("/contas-a-receber/relatorios", (req, res) => {
     fs.readFile("teste.json", (err, arquivo) => {
     if (err) {
-        return res.status(400).json({message: "Relatório não existe"})
+        return res.status(400).json({message: "O Relatório solicitado não existe"})
     }
         let jeison = JSON.parse(arquivo)
         return res.status(200).json(jeison)
